@@ -2,7 +2,7 @@
 Пакет *occupancy_ugv_map*
 * Для запуска ноды, необходимо поместить папку *occupancy_ugv_map* в ранее созданную catkin директорию, а именно в `{catkin_dir}/src/`
 * Затем сбилдить его командой `catkin_make --pkg occupancy_ugv_map`
-* После билда при желании можно поменять параметр в файле *occupancy_ugv_map/launch/occupancy_ugv.launch*
+* После билда при желании можно поменять параметры в файле `occupancy_ugv_map/launch/occupancy_ugv.launch`
   * `~cloud_in` - название топика откуда будет браться облако точек `sensor_msgs/PointCloud2`
   * `~output` - название топика куда будет публиковаться готовая карта `nav_msgs/OccupancyGrid`
   * `~odom` - название топика откуда будет браться одометрия `nav_msgs/Odometry`
