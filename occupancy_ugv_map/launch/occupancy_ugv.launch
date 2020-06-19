@@ -1,0 +1,13 @@
+<launch>
+	<node	pkg="tf2_ros" type="static_transform_publisher" name="base_to_lidar" args="-0.048536479473114 0.00012552738189697 0.087779015302658 -0.00071599124930799 0.00001 0.00008 0.99999982118607 base_link lidar" />
+	
+	<node pkg="occupancy_ugv_map" type="occupancy_ugv_map_node" name="occupancy_ugv_map_node">
+		<param name="~cloud_in" type="string" value="/velodyne_points" />
+		<param name="~output" type="string" value="/ugv_map" />
+		<param name="~odom" type="string" value="/sim_ros_interface/odometry"/>
+		<param name="~width" type="int" value="500"/>
+		<param name="~height" type="int" value="500"/>
+		<param name="~resolution" type="double" value="0.2"/> <!--1 cm per cell-->
+
+	</node>
+</launch>
